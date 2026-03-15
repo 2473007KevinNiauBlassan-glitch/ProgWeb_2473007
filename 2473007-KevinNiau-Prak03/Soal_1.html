@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2473007_Kevin Niau</title>
+    </head>
+    <body>
+        <form action="upload.php" style="margin-bottom: 100px;"name="Edit Profile" method="post" enctype="multipart/form-data">
+            <table border="2" width="500" cellpadding="10" cellspacing="3">
+                <tr align="center">
+                    <td colspan="2" Bgcolor="silver">
+                        <b style="font-size:larger;">Edit profile</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" width="100">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Tim_Berners-Lee.jpg" width="120">
+                        <br>
+                        <input type="submit" value="Upload" name="submit">
+                    </td>
+                    <td> 
+            <table  style="width: 200px;">     
+                <tr>
+                    <td>
+                        <label>Name</label>
+                    </td>
+                    <td>
+                        <input type="Text" name="nama" size="25" maxlength="15" value="Tim Benners-Lee">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Posisition</label>
+                    </td>
+                    <td>
+                        <select style="width: 200px;">
+                            <optgroup label ="Programer">
+                            <option>Senior Programer</option>
+                            <option>Junior Programer</option>
+                            </optgroup>
+                            <optgroup label="System Anaylist">
+                            <option>Senior System Analyst</option>
+                            <option>Junior System Analyst</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Password</label>
+                    </td>
+                    <td>
+                        <input Type="text" name="password" size="25" maxlength="15" value="Admin">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Confirm Password</label>
+                    </td>
+                    <td>
+                        <input Type="password" name="Confirm password" size="25" maxlength="15">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" colspan="2">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <input type="Reset" value="Reset">
+                        <input type="submit" value="Update"> 
+                    </td>
+                </tr>
+                </tr> 
+            </table>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2473007_Kevin Niau</title>
+    </head>
+    <body>
+        <form>
+            <table style="border: 2px solid black; width: 350px;">
+                <tr>
+                    <td colspan="3" align="center">
+                        <h2>Form Tambah Data User</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Nama
+                    </td>
+                    <td>
+                        :
+                    </td>
+                    <td>
+                        <input type="text" name="datanama" required
+                        oninvalid="this.setCustomValidity('Name is required!!!')"
+                        oninput="this.setCustomValidity('')">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Alamat
+                    </td>
+                    <td>
+                        :
+                    </td>
+                    <td>
+                        <input type="text" name="dataalamat" required
+                        oninvalid="this.setCustomValidity('Address is required!!!')"
+                        oninput="this.setCustomValidity('')">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Email
+                    </td>
+                    <td>
+                        :
+                    </td>
+                    <td>
+                        <input type="email" name="dataemail" required
+                        oninvalid="if(this.value && !this.value.includes('@')){this.setCustomValidity('Sertakan \'@\' pada alamat email ini. \'' + this.value + '\' tidak memiliki \'@\'.');}else{this.setCustomValidity('Harap isi bidang ini.');}"
+                        oninput="this.setCustomValidity('')">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Home Page
+                    </td>
+                    <td>
+                        :
+                    </td>
+                    <td>
+                        <input type="url" name="datahomepage">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Birthday
+                    </td>
+                    <td>
+                        :
+                    </td>
+                    <td>
+                        <input type="date" name="dataultah">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Favorite Color
+                    </td>
+                    <td>
+                        :
+                    </td>
+                    <td>
+                        <input type="color" name="datawarna">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        IPK
+                    </td>
+                    <td>
+                        :
+                    </td>
+                    <td>
+                        <input type="number" name="dataIPK" min="0" max="4" step="0.1" value="0">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Phone Number
+                    </td>
+                    <td>
+                        :
+                    </td>
+                    <td>
+                        <input type="tel" name="dataphone"
+                        pattern="[0-9]{3}-[0-9]{7,10}"
+                        title="Format: ###-####### sampai ###-##########">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <input type="submit" name="Add" value="Add">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
