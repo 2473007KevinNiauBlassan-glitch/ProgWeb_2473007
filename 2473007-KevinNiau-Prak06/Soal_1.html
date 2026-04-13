@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2473007_Kevin Niau</title>
+    </head>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        td {
+            width: 60px;
+            height: 40px;
+            text-align: center;
+            border: 1px solid black;
+            font-size: 20px;
+        }
+        input {
+            margin: 5px;
+        }
+    </style>
+    <script>
+        function hitung() {
+            let a = parseInt(document.getElementById("angka1").value);
+            let b = parseInt(document.getElementById("angka2").value);
+
+            let tambah = a + b;
+            let kurang = a - b;
+
+            document.getElementById("a1").innerHTML = a;
+            document.getElementById("b1").innerHTML = b;
+            document.getElementById("hasil1").innerHTML = tambah;
+
+            document.getElementById("a2").innerHTML = a;
+            document.getElementById("b2").innerHTML = b;
+            document.getElementById("hasil2").innerHTML = kurang;
+        }
+    </script>
+    <body>
+        <p>
+        Angka Pertama :
+        <input type="text" id="angka1">
+        <br>
+        Angka Kedua :
+        <input type="text" id="angka2">
+        <br>
+        </p>
+        <button onclick="hitung()">Count</button>
+    <table>
+        <tr>
+            <td id="a1"></td>
+            <td>+</td>
+            <td id="b1"></td>
+            <td>=</td>
+            <td id="hasil1"></td>
+        </tr>
+        <tr>
+            <td id="a2"></td>
+            <td>-</td>
+            <td id="b2"></td>
+            <td>=</td>
+            <td id="hasil2"></td>
+        </tr>
+    </table>
+    </body>
+</html>
