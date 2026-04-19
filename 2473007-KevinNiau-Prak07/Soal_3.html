@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2473007_Kevin Niau</title>
+    </head>
+    <style>
+        body {
+            font-family: monospace;
+        }
+        .box {
+            display: inline-block;
+            border: 2px solid #aaa;
+            padding: 10px;
+            margin: 20px;
+            background: #f9f9f9;
+        }
+        .row {
+            margin-bottom: 8px;
+        }
+        label {
+            display: inline-block;
+            width: 60px;
+            font-size: 20px;
+        }
+        input {
+            width: 150px;
+            height: 22px;
+        }
+        button {
+            margin-top: 5px;
+        }
+        select {
+            margin-left: 5px;
+        }
+    </style>
+    <script>
+        let data = [];
+
+        function addData() {
+            let input = document.getElementById("data");
+            let nilai = Number(input.value);
+
+            if (isNaN(nilai)) {
+                alert("Masukkan angka!");
+                return;
+            }
+
+            data.push(nilai);
+            input.value = "";
+        }
+
+        function proses(val) {
+            let hasil = document.getElementById("hasil");
+
+            if (val === "display") {
+                hasil.value = data.join(", ");
+
+            } else if (val === "count") {
+                hasil.value = data.length;
+
+            } else if (val === "sum") {
+                let total = data.reduce((a, b) => a + b, 0);
+                hasil.value = total;
+
+            } else if (val === "avg") {
+                let avg = data.length ? data.reduce((a, b) => a + b, 0) / data.length : 0;
+                hasil.value = avg;
+
+            } else if (val === "max") {
+                hasil.value = data.length ? Math.max(...data) : "";
+
+            } else if (val === "min") {
+                hasil.value = data.length ? Math.min(...data) : "";
+
+            } else if (val === "ganjil") {
+                hasil.value = data.filter(x => x % 2 !== 0).join(", ");
+
+            } else if (val === "genap") {
+                hasil.value = data.filter(x => x % 2 === 0).join(", ");
+
+            } else if (val === "hapus") {
+                data = [];
+                hasil.value = "";
+            }
+        }
+    </script>
+    <body>
+        <div class="box">
+        <div class="row">
+            <label>Data</label>
+            <input type="text" id="data">
+        </div>
+
+        <div class="row">
+            <button onclick="addData()">Add</button>
+            <select onchange="proses(this.value)">
+                <option value="">Pilih Operasi</option>
+                <option value="display">Display</option>
+                <option value="count">Count</option>
+                <option value="sum">Sum</option>
+                <option value="avg">Average</option>
+                <option value="max">Max</option>
+                <option value="min">Min</option>
+                <option value="ganjil">Ganjil</option>
+                <option value="genap">Genap</option>
+                <option value="hapus">Hapus</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <label>Hasil</label>
+            <input type="text" id="hasil" readonly>
+        </div>
+        </div>
+    </body>
+</html>

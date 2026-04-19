@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2473007_Kevin Niau</title>
+    </head>
+    <script type="text/javascript">
+        function call(ob) {
+        obval = ob.value;
+        if (obval.length > 256) {
+            ob.value = obval.substr(0, 256);
+            obval = ob.value; 
+        }
+        document.getElementById("txt").value = obval.length + "/256";
+    }
+    </script>
+    <body>
+        <form>
+            <table>
+                <tr>
+                    <td>Judul</td>
+                    <td>: <input type="text" name="judul"></td>
+                </tr>
+                <tr>
+                    <td valign="top">Deskripsi :</td>
+                    <td> <textarea name="deskripsi" onkeyup="call(this)" onkeydown="call(this)" rows="5" cols="30"></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td align="right"> 
+                        <input type="text" id="txt" value="0/256" readonly style="width: 50px; text-align: right;">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

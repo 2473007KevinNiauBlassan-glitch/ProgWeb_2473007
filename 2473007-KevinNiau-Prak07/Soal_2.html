@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2473007_Kevin Niau</title>
+    </head>
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+            width: 400px;
+        }
+        th, td {
+            border: 1px solid white;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #aabbaa;
+        }
+        .blue {
+            background-color: #aaccff;
+        }
+        .orange {
+            background-color: #ffccaa;
+        }
+        .green {
+            background-color: #CCFFAA;
+        }
+    </style>
+    <script type="text/javascript">
+        function highLight(Targetbaris) {
+            document.getElementById(Targetbaris).className = "green";
+        }
+        function normal(Targetbaris, warnaDefault) {
+            document.getElementById(Targetbaris).className = warnaDefault;
+        }
+    </script>
+    <body>
+        <table>
+            <tr>
+                <th>Position</th>
+                <th>Programming Language</th>
+                <th>Ratings</th>
+            </tr>
+            <tr id="row1" class="blue" onmouseover="highLight('row1')" onmouseout="normal('row1', 'blue')">
+                <td>1</td>
+                <td>C</td>
+                <td>18.058%</td>
+            </tr>
+            <tr id="row2" class="orange" onmouseover="highLight('row2')" onmouseout="normal('row2', 'orange')">
+                <td>2</td>
+                <td>Java</td>
+                <td>18.051%</td>
+            </tr>
+            <tr id="row3" class="blue" onmouseover="highLight('row3')" onmouseout="normal('row3', 'blue')">
+                <td>3</td>
+                <td>C++</td>
+                <td>9.707%</td>
+            </tr>
+            <tr id="row4" class="orange" onmouseover="highLight('row4')" onmouseout="normal('row4', 'orange')">
+                <td>4</td>
+                <td>PHP</td>
+                <td>9.662%</td>
+            </tr>
+            <tr id="row5" class="blue" onmouseover="highLight('row5')" onmouseout="normal('row5', 'blue')">
+                <td>5</td>
+                <td>(Visual) Basic</td>
+                <td>6.392%</td>
+            </tr>
+        </table>
+    </body>
+</html>
