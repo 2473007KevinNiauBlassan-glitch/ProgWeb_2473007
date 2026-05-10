@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2473007_Kevin Niau</title>
+    </head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        .container {
+            margin-top: 15px;
+            font-family: Arial, sans-serif;
+        }
+        .item {
+            margin-bottom: 5px;
+            display: block;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#btn-add").click(function () {
+                let nama = $("#input").val().trim();
+                if (nama !== "") {
+                    $("<div class='item'>" + nama + "</div>").appendTo(".container");
+                    $("#input").val("").focus();
+                }
+            });
+            $("#btn-search").click(function () {
+                let search = $("#input").val().trim();
+                $(".item").css("text-decoration", "none");
+                if (search !== "") {
+                    $(".item:contains('" + search + "')").css("text-decoration", "underline");
+                }
+            });
+        });
+    </script>
+    <body>
+        <input type="text" id="input">
+        <button id="btn-add">Add</button>
+        <button id="btn-search">Search</button>
+        <div class="container"></div>
+    </body>
+</html>
